@@ -1,7 +1,5 @@
 [webservers]
-webserver.local
+35.224.215.115
 
 [dbservers]
-dbserver.local
-
-
+35.224.215.115
