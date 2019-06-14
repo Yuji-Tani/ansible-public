@@ -5,6 +5,10 @@
   yum: name=ntp state=present
   tags: ntp
 
+- name: set timezone to Asia/Tokyo
+  timezone:
+    name: Asia/Tokyo
+
 - name: Install common dependencies
   yum: name={{ item }} state=installed
   with_items:
