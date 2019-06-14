@@ -1,0 +1,5 @@
+- hosts: all
+  user: yuji
+  tasks:
+    - name: Create hoge directory
+      file: path=/tmp/foo state=directory mode=0775 owner=yuji group=yuji

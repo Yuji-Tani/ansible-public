@@ -1,0 +1,24 @@
+- name: Ansible Example
+  hosts: gcp
+  become: true
+  tasks:
+    - name: Install libselinux-python
+      yum:
+        name: libselinux-python
+        state: present
+
+    - name: Install EPEL Repository
+      yum:
+         name: epel-release
+         state: present
+
+    - name: Install ngnix
+      yum:
+        name: nginx
+        state: present
+
+    - name: set run automation
+      service:
+        name: nginx
+        state: started
+        enabled: true

@@ -1,0 +1,11 @@
+- name: nginxの起動ユーザーの追加
+  user:
+    name: nginx
+
+- name: nginxのインストール
+  yum: name=nginx state=present
+
+- name: nginxのサービススタート
+  service:
+    name: nginx
+    enabled: yes
